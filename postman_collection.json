@@ -1,0 +1,104 @@
+{
+    "info": {
+        "name": "Microservices Demo",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "User Service",
+            "item": [
+                {
+                    "name": "List All Users",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/users",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["users"]
+                        }
+                    }
+                },
+                {
+                    "name": "Create User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/users",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["users"]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/users/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["users", "1"]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"John Doe Updated\",\n    \"email\": \"john.updated@example.com\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Notification Service",
+            "item": [
+                {
+                    "name": "List All Notifications",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8081/notifications",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8081",
+                            "path": ["notifications"]
+                        }
+                    }
+                },
+                {
+                    "name": "Get User Notification",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8081/notifications/user/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8081",
+                            "path": ["notifications", "user", "1"]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
