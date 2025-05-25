@@ -83,8 +83,8 @@ go run main.go
   [
     {
       "id": 1,
-      "name": "John Doe",
-      "email": "john@example.com",
+      "name": "Shariar Hossain",
+      "email": "shariar99@example.com",
       "updated_at": "2025-05-25T10:00:00Z"
     }
   ]
